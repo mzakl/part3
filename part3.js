@@ -81,7 +81,7 @@
 const fs = require('node:fs');
 
 // 2. Create some data to write to a file
-const data = 'Hello, World! This text will be saved to a file';
+// const data = 'Hello, World! This text will be saved to a file';
 const fileName = 'output.txt';
 
 // 3. Use the writeFile function.
@@ -92,12 +92,30 @@ const fileName = 'output.txt';
 // And a callback function
 
 //4. Write file
-fs.writeFile(fileName, data, (err) => {
-  // check if there is an error
+// fs.writeFile(fileName, data, (err) => {
+//   // check if there is an error
+//   if (err) {
+//     console.error(err);
+//   } else {
+//     // Log that the file was written successfuly.
+//     console.log('File written successfully');
+//   }
+// });
+
+// 5. Use the readFile function
+// This function takes in 3 parameters
+// The file name
+// The options - this is optional
+// And a callback function
+
+// 6. read from file
+fs.readFile(fileName, (err, fileText) => {
+  // check for any errors
   if (err) {
     console.error(err);
-  } else {
-    // Log that the file was written successfuly.
-    console.log('File written successfully');
+    return;
   }
+  // output read file to the console.
+  console.log('The file contents are:');
+  console.log(fileText.toString());
 });
