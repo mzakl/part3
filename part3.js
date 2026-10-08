@@ -12,7 +12,7 @@ let myName = 'Mohamad';
 // console.log(`myString      = ${myString}`);
 // console.log(`anotherString = ${anotherString}`);
 // console.log(`hello         = ${hello}`);
-console.log(`myName        = ${myName}`);
+// console.log(`myName        = ${myName}`);
 
 //===================================================================================
 
@@ -46,9 +46,29 @@ console.log(`myName        = ${myName}`);
 // Change the case of myName string
 
 // Change myName to upper case
-let myNameUpperCase = myName.toUpperCase();
-console.log(`Changing myName to upper case: ${myNameUpperCase}`);
+// let myNameUpperCase = myName.toUpperCase();
+// console.log(`Changing myName to upper case: ${myNameUpperCase}`);
 
 // Change myName to lower case
-let myNameLowerCase = myName.toLowerCase();
-console.log(`Changing myName to lower case: ${myNameLowerCase}`);
+// let myNameLowerCase = myName.toLowerCase();
+// console.log(`Changing myName to lower case: ${myNameLowerCase}`);
+
+//===================================================================================
+
+// Use various utility methods to create new strings
+
+// Using the concat method
+let newString01 = hello.concat(myName);
+console.log(`Concatenating hello & myName: ${newString01}`);
+
+// Using the trim method
+let newString02 = anotherString.trim();
+console.log(`Trimming anotherString: ${newString02}`);
+
+// Using the replace method
+let newString03 = myString.replace('is a', '');
+console.log(`Changing "is a" in myString to empty space: ${newString03}`);
+
+// Using the split method
+let newString04 = myString.split(' ');
+console.log(`Breaking myString using spaces: ${newString04}`);
