@@ -9,10 +9,10 @@ let anotherString = '   Another string';
 let hello = 'Hello there!';
 let myName = 'Mohamad';
 
-console.log(`myString      = ${myString}`);
-console.log(`anotherString = ${anotherString}`);
+// console.log(`myString      = ${myString}`);
+// console.log(`anotherString = ${anotherString}`);
 // console.log(`hello         = ${hello}`);
-// console.log(`myName        = ${myName}`);
+console.log(`myName        = ${myName}`);
 
 //===================================================================================
 
@@ -34,9 +34,21 @@ console.log(`anotherString = ${anotherString}`);
 // slice and substring functions
 
 // Slice "is a" from myString
-let stringSlice = myString.slice(5, 9);
-console.log(`Slicing "is a" from myString: ${stringSlice}`);
+// let stringSlice = myString.slice(5, 9);
+// console.log(`Slicing "is a" from myString: ${stringSlice}`);
 
 // Use substring to get "the" from anotherString
-let stringSubstring = anotherString.substring(6, 9);
-console.log(`Getting "the" from antherString: ${stringSubstring}`);
+// let stringSubstring = anotherString.substring(6, 9);
+// console.log(`Getting "the" from antherString: ${stringSubstring}`);
+
+//===================================================================================
+
+// Change the case of myName string
+
+// Change myName to upper case
+let myNameUpperCase = myName.toUpperCase();
+console.log(`Changing myName to upper case: ${myNameUpperCase}`);
+
+// Change myName to lower case
+let myNameLowerCase = myName.toLowerCase();
+console.log(`Changing myName to lower case: ${myNameLowerCase}`);
