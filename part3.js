@@ -4,10 +4,10 @@
 // Date  : 09/10/2026
 
 // Define strings
-let myString = 'This is a string';
-let anotherString = '   Another string';
-let hello = 'Hello there!';
-let myName = 'Mohamad';
+// let myString = 'This is a string';
+// let anotherString = '   Another string';
+// let hello = 'Hello there!';
+// let myName = 'Mohamad';
 
 // console.log(`myString      = ${myString}`);
 // console.log(`anotherString = ${anotherString}`);
@@ -58,17 +58,46 @@ let myName = 'Mohamad';
 // Use various utility methods to create new strings
 
 // Using the concat method
-let newString01 = hello.concat(myName);
-console.log(`Concatenating hello & myName: ${newString01}`);
+// let newString01 = hello.concat(myName);
+// console.log(`Concatenating hello & myName: ${newString01}`);
 
 // Using the trim method
-let newString02 = anotherString.trim();
-console.log(`Trimming anotherString: ${newString02}`);
+// let newString02 = anotherString.trim();
+// console.log(`Trimming anotherString: ${newString02}`);
 
 // Using the replace method
-let newString03 = myString.replace('is a', '');
-console.log(`Changing "is a" in myString to empty space: ${newString03}`);
+// let newString03 = myString.replace('is a', '');
+// console.log(`Changing "is a" in myString to empty space: ${newString03}`);
 
 // Using the split method
-let newString04 = myString.split(' ');
-console.log(`Breaking myString using spaces: ${newString04}`);
+// let newString04 = myString.split(' ');
+// console.log(`Breaking myString using spaces: ${newString04}`);
+
+//===================================================================================
+
+// File Handling
+
+// 1. We need to bring in the fs module from Node
+const fs = require('node:fs');
+
+// 2. Create some data to write to a file
+const data = 'Hello, World! This text will be saved to a file';
+const fileName = 'output.txt';
+
+// 3. Use the writeFile function.
+// This function takes in 4 parameters
+// the file name,
+// The data
+// Options - this is optional
+// And a callback function
+
+//4. Write file
+fs.writeFile(fileName, data, (err) => {
+  // check if there is an error
+  if (err) {
+    console.error(err);
+  } else {
+    // Log that the file was written successfuly.
+    console.log('File written successfully');
+  }
+});
